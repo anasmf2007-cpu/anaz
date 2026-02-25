@@ -1,0 +1,19 @@
+Got it! I’ll assume you want a 3-swap operation in Python, which usually means swapping three elements in a list in a cyclic manner. Here's a clean example:
+
+def three_swap(lst, i, j, k):
+    """
+    Cyclically swaps elements at positions i, j, k in the list.
+    
+    lst: list of elements
+    i, j, k: indices of elements to swap
+    """
+    lst[i], lst[j], lst[k] = lst[k], lst[i], lst[j]
+    return lst
+
+# Example usage
+my_list = [1, 2, 3, 4, 5]
+print("Original list:", my_list)
+
+# Swap elements at indices 0, 1, 2
+swapped_list = three_swap(my_list, 0, 1, 2)
+print("After 3-swap:", swapped_list)
